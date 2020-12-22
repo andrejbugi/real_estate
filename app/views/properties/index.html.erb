@@ -1,0 +1,16 @@
+<h1>All Properties</h1>
+
+<ul>
+<% @properties.each do |property| %>
+<li>
+  <p><%=property.title%></p>
+  <p>More about the property: <%=property.description%></p>
+  <p>Type of property: <%=property.category%></p>
+  <p>Price: <%=property.price.round(2)%></p>
+  <p>Location: <%=property.location%></p>
+  <p>Is for: <%=property.listing_type%></p>
+  <p>Number of bedrooms: <%=property.bedroom%></p>
+  <p>Number of bathrooms: <%=property.bathroom%></p>
+</li><br>
+<% end %>
+</ul>
