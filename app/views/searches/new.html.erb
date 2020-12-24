@@ -1,0 +1,25 @@
+<h1> Advanced Search</h1>
+
+<%= form_with model: @search, local: true do |s| %>
+
+  <%= s.label :keywords %>
+  <%= s.text_field :keywords %>
+
+  <%= s.label :category %>
+  <%= s.select :category, options_for_select(@categories), include_blank: true %>
+
+  <%= s.label :location %>
+  <%= s.select :location, options_for_select(@locations), include_blank: true %>
+
+  <%= s.label :listing_type %>
+  <%= s.select :listing_type, options_for_select(@listing_types), include_blank: true %>
+
+  <%= s.label :bedroom, 'Bedrooms' %> - <%= s.number_field :bedroom, in: 0..10, step: 1 %>
+
+  <%= s.label :bathroom, 'Bathrooms' %> - <%= s.number_field :bathroom, in: 0..10, step: 1 %>
+
+  <%= s.label :min_price, "Min Price" %> - <%= s.text_field :min_price, size: 10 %>
+  <%= s.label :max_price, "Max Price" %> - <%= s.text_field :max_price, size: 10 %>
+
+  <%= s.submit 'Search' %>
+<% end %>
