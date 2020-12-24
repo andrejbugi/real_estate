@@ -1,0 +1,42 @@
+<%= form_with model: @property, local: true do |f| %>
+  <%= f.label :title, 'Enter Title' %>
+  <%= f.text_field :title %>
+
+  <%= f.label :description, 'Enter description' %>
+  <%= f.text_area :description %>
+
+  <%= f.label :category, 'Enter Category' %>
+  <%= f.select :category, ['Стан', 'Куќа', 'Деловен Простор', 'Магацин', 'Земјиште'] %>
+
+  <%= f.label :bedroom, 'Number of Bedrooms' %>
+  <%= f.number_field :bedroom, in: 1..20, step: 1  %>
+
+  <%= f.label :bathroom, 'Number of Bathrooms' %>
+  <%= f.number_field :bathroom, in: 1..20 %>
+
+  <%= f.label :location, 'Location of Property' %>
+  <%= f.select :location, {
+                          Macedonia: [["Skopje", "SK"], ["Bitola", "BT"], ["Kumanovo", "KU"], "Tetovo", "Gostivar", "Ohrid",
+                            "Struga", "Prilep", "Veles"],
+                          Serbia: [["Belgrade", "BG"], ["Nis", "NS"]],
+                          } %>
+
+  <%= f.label :price, 'Enter Price' %>
+  <%= f.number_field :price, in: 10000..100000, step: 500 %>
+
+  <%= f.label :listing_type, 'Listing Type' %>
+  <%= f.select :listing_type, ["Rent", "Sale"] %>
+
+  <%= f.label :interior, 'Interior' %>
+  <%= f.select :interior, ["Опремен", "Неопремен"] %>
+
+  <%= f.label :images, 'Choose Photos' %>
+  <%= f.file_field :images, multiple: true %>
+
+  <%= f.submit "Add Property" %>
+<% end %>
+
+
+  <%# <%= f.label :location, 'Location of Property' %>
+  <%# <%= f.range_field :location, in: 0..5 %>
+

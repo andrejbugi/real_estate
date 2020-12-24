@@ -4,13 +4,20 @@
 <% @properties.each do |property| %>
 <li>
   <p><%=property.title%></p>
-  <p>More about the property: <%=property.description%></p>
-  <p>Type of property: <%=property.category%></p>
-  <p>Price: <%=property.price.round(2)%></p>
-  <p>Location: <%=property.location%></p>
-  <p>Is for: <%=property.listing_type%></p>
-  <p>Number of bedrooms: <%=property.bedroom%></p>
-  <p>Number of bathrooms: <%=property.bathroom%></p>
+  <p>More about the property: <%=property.description %></p>
+  <p>Type of property: <%=property.category %></p>
+  <p>Price: <%=property.price %></p>
+  <p>Location: <%=property.location %></p>
+  <p>Is for: <%=property.listing_type %></p>
+  <p>Number of bedrooms: <%=property.bedroom %></p>
+  <p>Number of bathrooms: <%=property.bathroom %></p>
+  <% property.images.each do |image| %>
+    <%= image_tag(image) %>
+  <% end %>
 </li><br>
 <% end %>
 </ul>
+
+<%# property.images.attach(params[:images]) %>
+
+<%# property.images.attached? %>
