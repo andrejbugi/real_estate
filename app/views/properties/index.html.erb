@@ -1,5 +1,10 @@
 <h1>All Properties</h1>
 
+<%= form_tag properties_path, method: :get do %>
+  <%= text_field_tag :search, params[:search] %>
+  <%= submit_tag "Search" %>
+<% end %>
+
 <ul>
 <% @properties.each do |property| %>
 <li>
@@ -17,7 +22,3 @@
 </li><br>
 <% end %>
 </ul>
-
-<%# property.images.attach(params[:images]) %>
-
-<%# property.images.attached? %>

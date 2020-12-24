@@ -1,6 +1,6 @@
 class PropertiesController < ApplicationController
   def index
-    @properties = Property.all
+    @properties = Property.search(params[:search])
   end
 
   def show
@@ -24,7 +24,7 @@ class PropertiesController < ApplicationController
   end
 
   def edit
-    @property = Porperty.find(params[:id])
+    @property = Property.find(params[:id])
   end
 
   def update
@@ -55,6 +55,7 @@ class PropertiesController < ApplicationController
 
   def property_params
     params.require(:property).permit(:title, :description, :category, :bedroom, :bathroom,
-                                     :location, :price, :listing_type, :interior, images: [])
+                                     :location, :price, :listing_type, :interior,
+                                     images: [])
   end
 end

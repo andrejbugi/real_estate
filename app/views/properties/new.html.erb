@@ -1,3 +1,6 @@
+
+
+
 <%= form_with model: @property, local: true do |f| %>
   <%= f.label :title, 'Enter Title' %>
   <%= f.text_field :title %>
@@ -16,9 +19,9 @@
 
   <%= f.label :location, 'Location of Property' %>
   <%= f.select :location, {
-                          Macedonia: [["Skopje", "SK"], ["Bitola", "BT"], ["Kumanovo", "KU"], "Tetovo", "Gostivar", "Ohrid",
+                          Macedonia: ["Skopje", "Bitola", "Kumanovo", "Tetovo", "Gostivar", "Ohrid",
                             "Struga", "Prilep", "Veles"],
-                          Serbia: [["Belgrade", "BG"], ["Nis", "NS"]],
+                          Serbia: ["Belgrade", "Nis"],
                           } %>
 
   <%= f.label :price, 'Enter Price' %>

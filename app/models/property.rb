@@ -10,4 +10,12 @@ class Property < ApplicationRecord
   validates :interior, presence: true
 
   has_many_attached :images
+
+  def self.search(search)
+    if search
+      where(["location LIKE ?", "%#{search}%"])
+    else
+      all
+    end
+  end
 end
