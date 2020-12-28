@@ -1,3 +1,197 @@
 // Place all the styles related to the properties controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+// Index Page And Search Forms
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Abel', sans-serif;
+  box-sizing: border-box;
+}
+
+.index-page {
+  width: 90vw;
+  margin: auto;
+  display: flex;
+  padding-top: 4rem;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.index-page h1 {
+  color: rgb(73, 21, 21);
+  font-size: xx-large;
+  font-weight: 800;
+  text-align: center;
+}
+
+.search-container {
+  width: 100%;
+  margin: auto;
+  padding: 5px 10px 5px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.form-field {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.text-field {
+  width: 100%;
+  height: 5vh;
+  margin: 2px 0 12px 0;
+  padding: 1px 1px 1px 5px;
+  background-color: rgb(188, 195, 221);
+  color: rgb(73, 21, 21);
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 500;
+  text-align: left;
+  border-radius: 15px;
+  box-shadow: 1.5px 1.5px black;
+}
+
+// .text-field:hover {
+//   background-color: rgb(154, 157, 170);
+//   color: rgb(105, 51, 51);
+// }
+
+.button-simple-search {
+  text-decoration: none;
+  width: 10%;
+  background-color: rgb(188, 195, 221);
+  color: rgb(73, 21, 21);
+  border-radius: 15px;
+  font-size: 1rem;
+  box-shadow: 1.5px 1.5px black;
+}
+
+.button-simple-search:hover {
+  background-color: rgb(154, 157, 170);
+  color: rgb(105, 51, 51);
+}
+
+.link-search-advanced {
+  text-decoration: none;
+  width: 10%;
+  margin: 5px 5px 5px 5px;
+  padding-top: 2px;
+  font-size: 1rem;
+  border: 1px solid black;
+  box-shadow: 1.8px 1.8px black;
+  border-radius: 15px;
+  color: rgb(73, 21, 21);
+  background-color: rgb(188, 195, 221);
+  text-align: center;
+}
+
+.link-search-advanced:hover {
+  background-color: rgb(154, 157, 170);
+  color: rgb(105, 51, 51);
+}
+
+// End Of Index Page and Forms
+
+
+// Show property Start
+
+.index-property {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.show-property {
+  width: 80%;
+  padding-top: 4rem;
+  margin: auto;
+  display: flex;
+}
+
+.property-container {
+  padding: 1rem 1rem 1rem 1rem;
+  margin: 1rem 1rem 1rem 1rem;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 35%;
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(to bottom right, red 20%, black);
+}
+
+.property-titles {
+  width: 100%;
+  height: 20%;
+  text-align: center;
+}
+
+.property-titles h2 {
+  font-size: larger;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.property-titles h1 {
+  margin: 0;
+  font-size: xx-large;
+  font-weight: 800;
+}
+
+.property-titles p {
+  font-size: 1.3rem;
+}
+
+.property-container p {
+  margin: 1px 1px 0 5px;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.property-information {
+  width: 100%;
+  text-align: left;
+}
+
+.images-container {
+  margin-top: 2rem;
+  width: 100%;
+  justify-content: flex-end;
+  display: flex;
+  text-align: center;
+  // align-items: center;
+}
+
+.property-image {
+  margin: 5px 5px 5px 5px;
+  width: 75%;
+}
+
+// End show property
+
+
+// Across all App
+
+.row {
+  width: 100vw;
+  display: flex;
+}
+
+.column-12 {
+  width: 80%;
+  margin: auto;
+}
+
+

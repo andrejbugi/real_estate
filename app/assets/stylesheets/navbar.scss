@@ -1,0 +1,91 @@
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(75, 28, 28, 0.7);
+  color:  rgb(255,255,255);
+  /* To be fixed at top */
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+}
+
+.social-media-icons {
+  margin: 0.2rem;
+  padding: 0.5rem;
+}
+
+.social-media-icons a {
+  padding: 0.2rem;
+}
+
+.fab.fa-facebook {
+  color: rgba(255,255,255,0.7);
+}
+
+.fab.fa-instagram {
+  color: rgba(255,255,255,0.7);
+}
+
+.fab.fa-facebook:hover {
+  color:  rgba(255,255,255,0.5);
+}
+
+.fab.fa-instagram:hover {
+  color:  rgba(255,255,255,0.5);
+}
+
+.brand-title {
+  font-size: 1.5rem;
+  margin: .5rem;
+}
+
+.logo {
+  margin: .8rem;
+}
+
+.logo-img {
+  height: 35px;
+  width: 100px;
+}
+
+.navbar-links ul {
+  margin: 0.2rem;
+  padding: 0;
+  display: flex;
+}
+
+.navbar-links li {
+  list-style: none;
+
+}
+
+.navbar-links .navbar-link {
+  text-decoration: none;
+  color:  rgba(255,255,255,0.8);
+  padding: .6rem;
+  display: block;
+}
+
+.navbar-links .navbar-link:hover {
+  color:  rgba(255,255,255,0.5);
+}
+
+.toggle-button {
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color:  rgba(255,255,255,0.8);
+  border-radius: 10px;
+}

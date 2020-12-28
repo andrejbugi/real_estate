@@ -1,0 +1,19 @@
+<section class="show-property">
+  <div class="property-container">
+    <div class="property-titles">
+      <h2><%= @property.title %> </h2>
+      <h1>$ <%= @property.price %></h1>
+    </div>
+    <div class="property-information">
+      <h3>More Information:</h3>
+      <p><%= @property.description %></p>
+      <p><small>location: </small><%= @property.location.split.first %></p>
+      <p><small>for: </small><%= @property.listing_type %></p>
+    </div>
+    <div class="images-container">
+      <% @property.images.each do |image| %>
+        <%= image_tag(image, class: "property-image") %>
+      <% end %>
+    </div>
+  </div>
+</section>

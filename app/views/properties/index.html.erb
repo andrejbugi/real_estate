@@ -1,26 +1,43 @@
-<h1>All Properties</h1>
+<section class='index-page'>
+  <h1>Search Properties</h1>
 
-<%= form_tag properties_path, method: :get do %>
-  <%= text_field_tag :search, params[:search] %>
-  <%= submit_tag "Search" %>
-<% end %>
+  <div class="search-container">
+    <%= form_tag properties_path, method: :get, class: "form-field" do %>
+      <%= text_field_tag :search, params[:search], class: "text-field", placeholder: 'Search for city, location, postal code'  %>
+      <%= submit_tag "Search", class: "button-simple-search" %>
+    <% end %>
 
-<%= link_to 'Advanced Search', new_search_path %>
+    <%= link_to 'Advanced Search', new_search_path, class: "link-search-advanced" %>
+  </div>
+</section>
 
-<ul>
-<% @properties.each do |property| %>
-<li>
-  <p><%=property.title%></p>
-  <p>More about the property: <%=property.description %></p>
-  <p>Type of property: <%=property.category %></p>
-  <p>Price: <%=property.price %></p>
-  <p>Location: <%=property.location %></p>
-  <p>Is for: <%=property.listing_type %></p>
-  <p>Number of bedrooms: <%=property.bedroom %></p>
-  <p>Number of bathrooms: <%=property.bathroom %></p>
-  <% property.images.each do |image| %>
-    <%= image_tag(image) %>
+
+<section class="index-property">
+  <% @properties.each do |property| %>
+  <div class="property-container">
+    <div class="property-titles">
+      <h1>$ <%= property.price %></h1>
+      <p><%= property.description %></p>
+      <% property.images.first(1).each do |image| %>
+        <%= image_tag(image, class: "property-image") %>
+      <% end %>
+    </div>
+    <div class="property-information">
+      <h3>More Information:</h3>
+      <p><small>property: </small><%=property.category %></p>
+      <p><small>bedrooms: </small><%=property.bedroom %></p>
+      <p><small>bathrooms: </small><%=property.bathroom %></p>
+      <p><small>location: </small><%= property.location.split.first %></p>
+      <p><small>for: </small><%= property.listing_type %></p>
+      <p><small>contact: </small>This is static contact info</p>
+      <%= link_to 'To Property', property_path(property.id) %>
+    </div>
+    <div class="images-container">
+      <% property.images.first(1).each do |image| %>
+        <%= image_tag(image, class: "property-image") %>
+      <% end %>
+    </div>
+
+  </div>
   <% end %>
-</li><br>
-<% end %>
-</ul>
+</section>

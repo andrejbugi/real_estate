@@ -1,5 +1,5 @@
 class Property < ApplicationRecord
-  validates :title, presence: true, length: { maximum: 20 }
+  # validates :title, presence: true, length: { maximum: 20 }
   validates :description, presence: true, length: { minimum: 20, maximum: 256 }
   validates :category, presence: true
   validates :bedroom, presence: true, numericality: { only_integer: true }
@@ -13,7 +13,7 @@ class Property < ApplicationRecord
 
   def self.search(search)
     if search
-      where(["title LIKE ?", "%#{search}%"])
+      where(["location LIKE ?", "%#{search}%"])
     else
       all
     end

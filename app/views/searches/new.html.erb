@@ -1,25 +1,46 @@
-<h1> Advanced Search</h1>
 
-<%= form_with model: @search, local: true do |s| %>
+<section class="advance-search-section">
+  <h1> Advanced Search</h1>
 
-  <%= s.label :keywords %>
-  <%= s.text_field :keywords %>
+  <div class="advanced-search-container">
+    <%= form_with model: @search, class: "form-group", local: true do |s| %>
 
-  <%= s.label :category %>
-  <%= s.select :category, options_for_select(@categories), include_blank: true %>
+      <div class="input-field">
+        <%= s.label :keywords %>
+        <%= s.text_field :keywords %>
+      </div>
 
-  <%= s.label :location %>
-  <%= s.select :location, options_for_select(@locations), include_blank: true %>
+      <div class="input-field">
+      <%= s.label :category %>
+      <%= s.select :category, options_for_select(@categories), include_blank: true %>
+      </div>
 
-  <%= s.label :listing_type %>
-  <%= s.select :listing_type, options_for_select(@listing_types), include_blank: true %>
+      <div class="input-field">
+      <%= s.label :location %>
+      <%= s.select :location, options_for_select(@locations), include_blank: true %>
+      </div>
 
-  <%= s.label :bedroom, 'Bedrooms' %> - <%= s.number_field :bedroom, in: 0..10, step: 1 %>
+      <div class="input-field">
+      <%= s.label :listing_type %>
+      <%= s.select :listing_type, options_for_select(@listing_types), include_blank: true %>
+      </div>
 
-  <%= s.label :bathroom, 'Bathrooms' %> - <%= s.number_field :bathroom, in: 0..10, step: 1 %>
+      <div class="input-field">
+      <%= s.label :bedroom, 'Bedrooms' %> - <%= s.number_field :bedroom, in: 0..10, step: 1 %>
+      </div>
 
-  <%= s.label :min_price, "Min Price" %> - <%= s.text_field :min_price, size: 10 %>
-  <%= s.label :max_price, "Max Price" %> - <%= s.text_field :max_price, size: 10 %>
+      <div class="input-field">
+      <%= s.label :bathroom, 'Bathrooms' %> - <%= s.number_field :bathroom, in: 0..10, step: 1 %>
+      </div>
 
-  <%= s.submit 'Search' %>
-<% end %>
+      <div class="input-field">
+      <%= s.label :min_price, "Min Price" %> - <%= s.text_field :min_price, size: 10 %>
+      <%= s.label :max_price, "Max Price" %> - <%= s.text_field :max_price, size: 10 %>
+      </div>
+
+      <div class="input-field">
+        <%= s.submit 'Search' %>
+      </div>
+    <% end %>
+  </div>
+</section>

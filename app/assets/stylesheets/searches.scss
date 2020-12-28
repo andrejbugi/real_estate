@@ -1,3 +1,31 @@
 // Place all the styles related to the searches controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.advance-search-section {
+  padding-top: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.advance-search-section h1 {
+  text-align: center;
+}
+
+.advanced-search-container {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.input-field {
+  display: flex;
+  margin-right: 1rem;
+  padding: 1rem 1rem 1rem 1rem;
+}
+
+.form-group {
+
+}
