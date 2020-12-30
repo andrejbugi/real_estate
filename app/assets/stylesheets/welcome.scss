@@ -1,0 +1,58 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.welcome {
+  padding-top: 4rem;
+  // display: flex;
+  // background-image: linear-gradient(to bottom, red, black);
+}
+
+.welcome-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.welcome-container h1 {
+  font-size: xx-large;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-shadow: 1.5px 1px brown;
+}
+
+.welcome-container h3 {
+  font-size: x-large;
+  font-weight: 700;
+  text-transform: capitalize;
+  text-shadow: 1px .5px brown;
+}
+
+.welcome-container p {
+  font-style: italic;
+  color: brown;
+  text-shadow: .5px .5px black;
+}
+
+.links {
+  width: 8%;
+  padding: 2px 2px 2px 2px;
+  border: .5px solid black;
+  border-radius: 5px;
+  font-size: large;
+  font-weight: bolder;
+  text-decoration: none;
+  color: brown;
+  background-color: transparent;
+  text-shadow: .5px .5px black;
+  box-shadow: 5px 2px rgba(0, 0, 0, 0.199);
+}
+
+.links:hover {
+  background-color: rgba(128, 128, 128, 0.123);
+  color: black;
+  text-shadow: .5px .5px brown;
+}

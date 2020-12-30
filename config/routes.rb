@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  root 'properties#index'
-  
+  root 'welcome#index'
+
   resources :searches
   resources :properties
 end
