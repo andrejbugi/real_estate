@@ -38,16 +38,17 @@
 }
 
 .links {
-  width: 8%;
+  width: 12%;
   padding: 2px 2px 2px 2px;
   border: .5px solid black;
   border-radius: 5px;
-  font-size: large;
+  font-size: 2rem;
   font-weight: bolder;
+  text-transform: capitalize;
   text-decoration: none;
   color: brown;
   background-color: transparent;
-  text-shadow: .5px .5px black;
+  text-shadow: 1.5px .5px rgb(107, 102, 102);
   box-shadow: 5px 2px rgba(0, 0, 0, 0.199);
 }
 
