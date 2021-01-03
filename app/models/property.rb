@@ -10,6 +10,7 @@ class Property < ApplicationRecord
   validates :interior, presence: true
 
   has_many_attached :images
+  belongs_to :user
 
   def self.search(search)
     if search

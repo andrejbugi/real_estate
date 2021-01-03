@@ -1,0 +1,17 @@
+.users-forms {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-decoration: none;
+  padding-top: 4rem;
+  color: brown;
+  text-shadow: 1.5px 1px black;
+  align-items: center;
+}
+
+.users-forms .field {
+  display: flex;
+  color: brown;
+  text-shadow: .5px .5px black;
+}
