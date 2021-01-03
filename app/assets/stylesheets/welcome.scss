@@ -57,3 +57,14 @@
   color: black;
   text-shadow: .5px .5px brown;
 }
+
+.weather-date {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  width: 14vw;
+  font-size: 1.4rem;
+  text-shadow: 1.5px 1px black;
+  color: brown;
+}

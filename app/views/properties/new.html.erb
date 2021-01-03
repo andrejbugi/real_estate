@@ -1,46 +1,48 @@
 
-<%= form_with model: @property, local: true do |f| %>
-  <%= f.label :title, 'Enter Title' %>
-  <%= f.text_field :title %>
+<section class="create-new-property">
+  <%= form_with model: @property, local: true do |f| %>
+    <%= f.label :title, 'Enter Title' %>
+    <%= f.text_field :title %>
 
-  <%= f.label :description, 'Enter description' %>
-  <%= f.text_area :description %>
+    <%= f.label :description, 'Enter description' %>
+    <%= f.text_area :description %>
 
-  <%= f.label :category, 'Enter Category' %>
-  <%= f.select :category, ['Стан', 'Куќа', 'Деловен Простор', 'Магацин', 'Земјиште'] %>
+    <%= f.label :category, 'Enter Category' %>
+    <%= f.select :category, ['Стан', 'Куќа', 'Деловен Простор', 'Магацин', 'Земјиште'] %>
 
-  <%= f.label :bedroom, 'Number of Bedrooms' %>
-  <%= f.number_field :bedroom, in: 1..20, step: 1  %>
+    <%= f.label :bedroom, 'Number of Bedrooms' %>
+    <%= f.number_field :bedroom, in: 1..20  %>
 
-  <%= f.label :bathroom, 'Number of Bathrooms' %>
-  <%= f.number_field :bathroom, in: 1..20 %>
+    <%= f.label :bathroom, 'Number of Bathrooms' %>
+    <%= f.number_field :bathroom, in: 1..20 %>
 
-  <%= f.label :location, 'Location of Property' %>
-  <%= f.select :location, {
-        Macedonia: [ "Skopje 1000", "Bitola 7000", "Kumanovo 1300", "Tetovo 1200", "Gostivar 1230", "Ohrid 6000",
-                    "Struga 6330", "Prilep 7500", "Veles 1400", "Kavadarci 1430", "Negotino 1440",
-                    "Demir Kapija 1442", "Gevgelija 1480", "Stip 2000", "Probistip 2210",
-                    "Sveti Nikole 2220", "Kocani 2300", "Vinica 2310", "Delcevo 2320", "Makedonska Kamenica 2304",
-                    "Pehcevo 2326", "Berovo 2330", "Strumica 2400", "Radovis 2420", "Valandovo 2460",
-                    "Debar 1250", "Kriva Palanka 1330", "Kratovo 1360", "Kicevo 6250", "Makedonski Brod 6530",
-                    "Demir Hisar 7240", "Resen 7310", "Krusevo 7550" ],
-        Serbia: ["Belgrad", "Nis"],
-      } %>
+    <%= f.label :location, 'Location of Property' %>
+    <%= f.select :location, {
+          Macedonia: [ "Skopje 1000", "Bitola 7000", "Kumanovo 1300", "Tetovo 1200", "Gostivar 1230", "Ohrid 6000",
+                      "Struga 6330", "Prilep 7500", "Veles 1400", "Kavadarci 1430", "Negotino 1440",
+                      "Demir Kapija 1442", "Gevgelija 1480", "Stip 2000", "Probistip 2210",
+                      "Sveti Nikole 2220", "Kocani 2300", "Vinica 2310", "Delcevo 2320", "Makedonska Kamenica 2304",
+                      "Pehcevo 2326", "Berovo 2330", "Strumica 2400", "Radovis 2420", "Valandovo 2460",
+                      "Debar 1250", "Kriva Palanka 1330", "Kratovo 1360", "Kicevo 6250", "Makedonski Brod 6530",
+                      "Demir Hisar 7240", "Resen 7310", "Krusevo 7550" ],
+          Serbia: ["Belgrad", "Nis"],
+        } %>
 
-  <%= f.label :price, 'Enter Price' %>
-  <%= f.number_field :price, in: 1..500000, step: 500 %>
+    <%= f.label :price, 'Enter Price' %>
+    <%= f.number_field :price, in: 0..500000 %>
 
-  <%= f.label :listing_type, 'Listing type' %>
-  <%= f.select :listing_type, ["Изнајмување", "Продажба"] %>
+    <%= f.label :listing_type, 'Listing type' %>
+    <%= f.select :listing_type, ["Изнајмување", "Продажба"] %>
 
-  <%= f.label :interior, 'Interior' %>
-  <%= f.select :interior, ["Опремен", "Неопремен"] %>
+    <%= f.label :interior, 'Interior' %>
+    <%= f.select :interior, ["Опремен", "Неопремен"] %>
 
-  <%= f.label :images, 'Choose Photos' %>
-  <%= f.file_field :images, multiple: true %>
+    <%= f.label :images, 'Choose Photos' %>
+    <%= f.file_field :images, multiple: true %>
 
-  <%= f.submit "Add Property" %>
-<% end %>
+    <%= f.submit "Add Property" %>
+  <% end %>
+</section>
 
   <%# <%= f.label :location, 'Location of Property' %>
   <%# <%= f.range_field :location, in: 0..5 %>
